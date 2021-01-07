@@ -31,7 +31,7 @@ def parse_sent_report():
                 break
             # Identify Total row logic
             elif str(ws_input.cell(r, 1).value) == "Total":
-                tot_row_no = r.
+                tot_row_no = r
                 start = True
                 break
             # Identify Total row logic
@@ -44,8 +44,8 @@ def parse_sent_report():
             response = str(ws_input.cell(r, 1).value)
 
             if start and c > 1 and c % 2 == 0:
-                print(r, c, question, response, str(ws_input.cell(tot_row_no - 1, c).value),
-                      str(ws_input.cell(tot_row_no, c).value), str(ws_input.cell(r, c).value), str(ws_input.cell(r, c + 1).value))
+                # print(r, c, question, response, str(ws_input.cell(tot_row_no - 1, c).value),
+                #       str(ws_input.cell(tot_row_no, c).value), str(ws_input.cell(r, c).value), str(ws_input.cell(r, c + 1).value))
 
                 if first:
                     first = False
